@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <h1>A Library of Books</h1>
+    <form action="#" autocomplete="off" onsubmit="return false">
+        <section class="titleContainer">
+            <label for="title">Title:</label>
+            <input name="title" id="title" type="text" required>
+        </section>
+        <section class="authorContainer">
+            <label for="title">Author:</label>
+            <input name="title" id="author" type="text" required>
+        </section>
+        <section class="pagesContainer">
+            <label for="title">Pages:</label>
+            <input name="title" id="pages" type="number" required>
+        </section>
+        <section class="radioBtns">
+            <input name="isCompleted" id="completed" type="radio" checked>
+            <label for="completed">Done</label>
+            <input name="isCompleted" id="notCompleted" type="radio">
+
+            <label for="notCompleted">Not done reading</label>
+        </section>
+        <input type="submit" id="addBookBtn" value="add book">
+    </form>
+
+    <section class="bookContainer">
+
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bookContainer {
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.isCompleted {
+    background-color: green;
+    content:'text'
+}
+
+.notCompleted {
+    background-color: red;
+}
