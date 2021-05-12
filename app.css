@@ -3,17 +3,22 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+h1 {
+    font-size: 4rem;
+}
+
 form {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
+    width: 75vw;
 }
 
 .bookContainer {
     width: 75vw;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .isCompleted {
@@ -23,4 +28,43 @@ form {
 
 .notCompleted {
     background-color: red;
+}
+
+article {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+}
+
+article button {
+    display: inline-block;
+    border: none;
+    padding: .5rem .75rem;
+    margin: 0;
+    text-decoration: none;
+    background: #ed3700;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
+}
+
+article button:hover,
+article button:focus {
+    background: #0053ba;
+}
+
+article div {
+    display: flex;
+    justify-content: space-around;
 }
