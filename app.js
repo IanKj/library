@@ -81,7 +81,11 @@ function addBookToLibrary(book) {
 
     buttonWrapper.append(isRead, remove);
     bookWrapper.append(bookTitle, bookAuthor, bookPages, buttonWrapper);
+    bookWrapper.classList.add('fade-in');
     bookContainer.append(bookWrapper);
+    setTimeout(function () {
+        bookWrapper.classList.add('show');
+    }, 1)
 }
 
 

@@ -10,30 +10,35 @@
 </head>
 
 <body>
-    <h1>A Library of Books</h1>
-    <form action="#" autocomplete="off" onsubmit="return false">
-        <section class="titleContainer">
-            <label for="title">Title:</label>
-            <input name="title" id="title" type="text" required>
-        </section>
-        <section class="authorContainer">
-            <label for="title">Author:</label>
-            <input name="title" id="author" type="text" required>
-        </section>
-        <section class="pagesContainer">
-            <label for="title">Pages:</label>
-            <input name="title" id="pages" type="number" required>
-        </section>
-        <section class="radioBtns">
-            <input name="isCompleted" id="completed" type="radio" checked>
-            <label for="completed">Done</label>
-            <input name="isCompleted" id="notCompleted" type="radio">
+    <section class="header">
+        <h1>A Library of Books</h1>
+        <form action="#" autocomplete="off" onsubmit="return false">
 
-            <label for="notCompleted">Not done reading</label>
-        </section>
-        <input type="submit" id="addBookBtn" value="add book">
-    </form>
+            <div class="text-input-container">
+                <section class="titleContainer">
+                    <label for="title">Title:</label>
+                    <input name="title" id="title" type="text" required>
+                </section>
+                <section class="authorContainer">
+                    <label for="title">Author:</label>
+                    <input name="title" id="author" type="text" required>
+                </section>
+                <section class="pagesContainer">
+                    <label for="title">Pages:</label>
+                    <input name="title" id="pages" type="number" required>
+                </section>
+            </div>
+            <section class="radioBtns">
+                <input name="isCompleted" id="completed" type="radio" checked>
+                <label for="completed">Read</label>
+                <input name="isCompleted" id="notCompleted" type="radio">
+                <label for="notCompleted">Unread</label>
+            </section>
 
+            <button type="submit" id="addBookBtn" value="Add Book">Add
+                Book</button>
+        </form>
+    </section>
     <section class="bookContainer">
 
     </section>

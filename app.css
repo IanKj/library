@@ -2,23 +2,56 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f98f04;
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4d47a;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 h1 {
     font-size: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 75vw;
+    height:12vh;
+    margin-bottom: 1rem;
+}
+.text-input-container {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
 }
 
+.text-input-container section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#addBookBtn {
+    background-color: #0053ba;
+}
+
+#addBookBtn:hover {
+    background: green;
+}
 .bookContainer {
     width: 75vw;
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
 .isCompleted {
@@ -34,13 +67,16 @@ article {
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
-    width: 30%;
+    width: 13rem;
     margin-bottom: 20px;
     margin-right: 20px;
     padding-bottom: 5px;
+    transition: all 1000ms ease-in-out, 
+                transform 1000ms ease;
+    background-color: #f4d47a;
 }
 
-article button {
+button {
     display: inline-block;
     border: none;
     padding: .5rem .75rem;
@@ -59,12 +95,21 @@ article button {
     border-radius: 5px;
 }
 
-article button:hover,
-article button:focus {
+button:hover,
+ button:focus {
     background: #0053ba;
 }
 
 article div {
     display: flex;
     justify-content: space-around;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transition: opacity 10 ease-in-out
 }
