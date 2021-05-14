@@ -1,3 +1,6 @@
+const myLibrary = [];
+
+
 const submit = document.querySelector('#addBookBtn')
 const title = document.querySelector('#title')
 const author = document.querySelector('#author')
@@ -6,7 +9,7 @@ const completed = document.querySelector('#completed')
 const notCompleted = document.querySelector('#notCompleted')
 const bookContainer = document.querySelector('.bookContainer');
 
-const myLibrary = [];
+
 
 function Book(title, author, pages, isCompleted) {
     this.title = title,
@@ -39,6 +42,9 @@ submit.addEventListener('click', e => {
 
 function addBookToLibrary(book) {
     myLibrary.push(book)
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+
+
     const bookWrapper = document.createElement('article');
     const bookTitle = document.createElement('p');
     bookTitle.innerText = book.title;
@@ -86,6 +92,17 @@ function addBookToLibrary(book) {
     setTimeout(function () {
         bookWrapper.classList.add('show');
     }, 1)
+
+
 }
 
 
+let localLibrary = JSON.parse(localStorage.getItem('myLibrary'))
+console.log(localLibrary)
+if (localLibrary) {
+    localLibrary.forEach(book => {
+        console.log('adding book from memory...')
+        addBookToLibrary(book)
+
+    })
+}
