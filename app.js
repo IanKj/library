@@ -31,9 +31,9 @@ submit.addEventListener('click', e => {
     if (title.value === '' || author.value === '' || pages.value < 1) {
         return
     }
-    // else if (alreadyExists()) {
-    //     return
-    // }
+    else if (alreadyExists()) {
+        return
+    }
     else {
         const newBook = new Book(title.value, author.value, pages.value, isCompleted)
         addBookToLibrary(newBook)
@@ -79,6 +79,7 @@ function addBookToLibrary(book) {
         for (let i = 0; i < myLibrary.length; i++) {
             if (selectedBook.firstElementChild.innerText.toLowerCase() === myLibrary[i].title.toLowerCase()) {
                 myLibrary.splice(i, 1)
+                localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
             }
         }
         selectedBook.remove();
@@ -105,4 +106,8 @@ if (localLibrary) {
         addBookToLibrary(book)
 
     })
+}
+
+function removeLocalBook(book){
+
 }

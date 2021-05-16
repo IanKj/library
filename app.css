@@ -68,6 +68,8 @@ form {
 
 article {
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     text-align: center;
     width: 13rem;
@@ -77,6 +79,7 @@ article {
     transition: all 1000ms ease-in-out, 
                 transform 1000ms ease;
     background-color: #f4d47a;
+    justify-content: space-between;
 }
 
 button {
