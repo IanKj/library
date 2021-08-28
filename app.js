@@ -10,12 +10,14 @@ const notCompleted = document.querySelector('#notCompleted')
 const bookContainer = document.querySelector('.bookContainer');
 
 
+class Book {
+    constructor(title, author, pages, isCompleted) {
+        this.title = title,
+            this.author = author,
+            this.pages = pages,
+            this.isCompleted = isCompleted
+    }
 
-function Book(title, author, pages, isCompleted) {
-    this.title = title,
-        this.author = author,
-        this.pages = pages,
-        this.isCompleted = isCompleted
 }
 
 submit.addEventListener('click', e => {
@@ -108,6 +110,6 @@ if (localLibrary) {
     })
 }
 
-function removeLocalBook(book){
+function removeLocalBook(book) {
 
 }

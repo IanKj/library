@@ -43,6 +43,10 @@ form {
 
 }
 
+form input:invalid {
+    border: 1px solid red;
+}
+
 #addBookBtn {
     background-color: #0053ba;
 }
